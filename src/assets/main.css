@@ -1,35 +1,439 @@
-@import './base.css';
+@import "./base.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+* {
+  box-sizing: border-box;
+  font-family: Arial, "PingFang SC", "Microsoft Yahei", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-a,
-.green {
+html {
+  background-color: #000;
+}
+
+a {
+  color: initial;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+/* -------------------------------------------------------------------------- */
+.svgs:hover {
+  filter: invert(30%) sepia(100%) saturate(2000%) hue-rotate(100deg);
+  background-color: #87878745;
+  cursor: pointer;
+}
+
+.dis {
+  display: flex;
+}
+
+.spa {
+  justify-content: space-between;
+}
+
+.disCen {
+  display: flex;
+  justify-content: center;
+}
+
+.poa {
+  position: absolute;
+}
+
+.poaRT {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.poaLT {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.r0 {
+  right: 0;
+}
+
+.r10 {
+  right: 10px;
+}
+
+.padL5 {
+  padding: 0 0 0 5px;
+}
+
+.padL10 {
+  padding: 0 0 0 10px;
+}
+
+.padL15 {
+  padding: 0 0 0 15px;
+}
+
+.padR10 {
+  padding: 0 10px 0 0;
+}
+
+.pad5 {
+  padding: 0 5px 0 5px;
+}
+
+.pad10 {
+  padding: 0 10px 0 10px;
+}
+
+.mar10 {
+  margin: 0 10px 0 10px;
+}
+
+.marA {
+  margin: auto;
+}
+
+.fz1 {
+  font-size: 1.5rem;
+}
+.fz2 {
+  font-size: 3rem;
+}
+
+.pTwo {
+  text-indent: 2.5rem;
+}
+
+.pFou {
+  text-indent: 5rem;
+}
+
+.pSix {
+  text-indent: 7.5rem;
+}
+
+.pEig {
+  text-indent: 10rem;
+}
+
+.pTen {
+  text-indent: 12.5rem;
+}
+
+.bor {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.tex {
+  text-decoration: line-through;
+}
+
+.bgcVS {
+  background-color: #292d3e;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: auto;
+}
+
+.keyword {
+  color: #0077aa;
+  font-weight: bold;
+}
+
+.variable {
+  color: #82aaff;
+  /* color: #a6accd; */
+}
+
+.operator {
+  color: #82aaff;
+  /* color: #5f5f5f; */
+}
+
+.number {
+  color: #f78c6c;
+  /* color: #008000; */
+}
+
+.string {
+  color: #a31515;
+}
+
+.function {
+  color: #c792ea;
+  /* color: #6f42c1; */
+}
+
+.parameter {
+  color: #b2ccd6;
+  /* color: #0077aa; */
+}
+
+.comment {
+  /* color: #6a9955; */
+  color: #676e95;
+}
+
+.then {
+  color: #89ddff;
+}
+
+.tag {
+  color: #f07178;
+}
+
+.src {
+  color: #c3e88d;
+}
+
+.word {
+  color: #a6accd;
+}
+
+.brackets {
+  /* color: #ff5370; */
+  /* color: #b2ccd6; */
+  /* color: #ff5370; */
+  /* color: #ff5370; */
+  color: #ffcb6b;
+}
+
+.cur {
+  cursor: pointer;
+}
+
+.tra {
+  transition: all 1.5s ease;
+}
+
+.poa {
+  position: absolute;
+  z-index: 20;
+}
+
+.oveX {
+  overflow-x: auto;
+}
+
+/* A CSS 模板 ------------------------------------------------------------------------------------------------- */
+
+/* V 切換 dark 模式的外觀 --------------------------------------------------------------- */
+.switchBall {
+  background-color: var(--black);
+  color: var(--gray);
+  transition: all var(--darkMode) ease;
+  width: 25px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.swiBall {
+  padding-left: 1px;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+/* A 切換 dark 模式的外觀 --------------------------------------------------------------- */
+/* V 右下角 TOP 外觀 --------------------------------------------------------------- */
+
+.toTop {
+  /* bottom: 50px; */
+  bottom: 20vh;
+  /* right: 200px; */
+  right: 100px;
+  position: fixed;
+  z-index: 100;
+  background-color: #6f0202;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toTopButton {
+  position: relative;
+  bottom: 7px;
+  padding-left: 0;
+  color: #999;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .toTop {
+    /* right: 150px; */
+    right: 75px;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+@media screen and (max-width: 800px) {
+  .toTop {
+    /* right: 100px; */
+    right: 50px;
   }
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+@media screen and (max-width: 600px) {
+  .toTop {
+    /* right: 70px; */
+    right: 35px;
   }
+}
+
+/* A 右下角 TOP 外觀 --------------------------------------------------------------- */
+/* V 控制 Transition fade 動畫 ------------------------------------------------------------------------------------------------------- */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2.1s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+}
+
+/* left--------------------------------------------------------------------------------- */
+
+.listLeft-enter-active,
+.listLeft-leave-active {
+  transition: all 3s ease;
+}
+
+.listLeft-enter-from {
+  transform: translateX(-100%);
+}
+.listLeft-leave-to {
+  transform: translateX(100%);
+}
+
+.listLeft-leave-active,
+.listLeft-enter-active {
+}
+
+/* right--------------------------------------------------------------------------------- */
+
+.listRight-enter-active,
+.listRight-leave-active {
+  transition: all 3s ease;
+}
+
+.listRight-enter-from {
+  transform: translateX(100%);
+}
+.listRight-leave-to {
+  transform: translateX(-100%);
+}
+
+.listRight-leave-active,
+.listRight-enter-active {
+}
+
+/* up--------------------------------------------------------------------------------- */
+
+.listUp-enter-active,
+.listUp-leave-active {
+  transition: all 3s ease;
+}
+
+.listUp-enter-from {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.listUp-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* A 控制 Transition fade 動畫 --------------------------------------------------------------------------------- */
+/* V code input 框特效 ------------------------------------------------------------------------------- */
+.code-container {
+  position: relative;
+  width: 80vw;
+  max-width: 100%;
+}
+
+.code-container pre {
+  margin: 0;
+}
+
+.code-container code {
+  /* code 背景 */
+  background-color: #282c34;
+  color: var(--gray);
+  transition: all var(--darkMode) ease;
+  display: block;
+  padding: 1em;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.code-container code span {
+  display: inline-block;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background-color: #0077aa;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.copy-status {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background-color: #0077aa;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.copy-status.show {
+  opacity: 1;
+}
+/* A code input 框特效 ------------------------------------------------------------------------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* background: #4c4c4c; */
+  background: #444;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: #888; */
+  background: #666;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
