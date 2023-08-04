@@ -6,11 +6,9 @@
     <input type="checkbox" id="nav_check" hidden />
     <nav>
       <ul>
-        <li><a class="active cor36" href="#">首頁</a></li>
         <li><a class="active cor36" href="#">關於</a></li>
-        <li><a class="active cor36" href="#">1</a></li>
-        <li><a class="active cor36" href="#">2</a></li>
-        <li><a class="active cor36" href="#">3</a></li>
+        <li><a class="active cor36" href="#">演算法</a></li>
+        <li><a class="active cor36" href="#">leetcode</a></li>
       </ul>
     </nav>
     <label for="nav_check" class="hamburger">
@@ -44,6 +42,8 @@ ul {
 
 .cor36 {
   color: #36c1cb;
+  padding: 0 25px;
+  border-right: 2px solid #36c1cb;
 }
 
 a {
