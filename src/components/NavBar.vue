@@ -2,13 +2,26 @@
 
 <template>
   <header>
-    <div class="logo">Wayne's 前端學習筆記</div>
+    <div class="">
+      <router-link to="/"
+        ><div class="svg">
+          <img src="../assets/title.svg" alt="" /></div
+      ></router-link>
+    </div>
     <input type="checkbox" id="nav_check" hidden />
     <nav>
       <ul>
-        <li><a class="active cor36" href="#">關於</a></li>
-        <li><a class="active cor36" href="#">演算法</a></li>
-        <li><a class="active cor36" href="#">leetcode</a></li>
+        <li>
+          <router-link to="/about"><div class="liPad">關於</div></router-link>
+        </li>
+        <li>
+          <router-link to="/about"><div class="liPad">演算法</div></router-link>
+        </li>
+        <li>
+          <router-link to="/about"
+            ><div class="liPad">leetcode</div></router-link
+          >
+        </li>
       </ul>
     </nav>
     <label for="nav_check" class="hamburger">
@@ -21,8 +34,8 @@
 
 <style scoped>
 header {
-  background: #000;
-  color: #36c1cb;
+  position: fixed;
+  background: #171717;
   height: 70px;
   width: 100%;
   display: flex;
@@ -31,32 +44,45 @@ header {
   padding: 0 50px;
 }
 
-.logo {
-  font-size: 30px;
-  font-weight: bold;
+nav {
+  color: #c4c4c4;
 }
 
 ul {
   display: flex;
 }
 
-.cor36 {
-  color: #36c1cb;
+.liPad {
   padding: 0 25px;
-  border-right: 2px solid #36c1cb;
+}
+
+.borR {
+  border-right: 2px solid #c4c4c4;
 }
 
 a {
   display: inline-block;
-  color: #000;
+  /* 沒互動顏色 */
+  color: #c4c4c4;
   padding: 5px 0;
   margin: 0 1;
   border: 3px solid transparent;
 }
 
-a:hover,
-.active {
-  border-bottom-color: black;
+a:hover {
+  /* 滑進時顏色 */
+  color: #3ddbe7;
+}
+
+.svg:hover {
+  /* svg 滑進時顏色 */
+  transition: all 0.4s ease;
+  filter: invert(30%) sepia(100%) saturate(500%) hue-rotate(100deg);
+}
+
+a.router-link-exact-active {
+  /* 到頁面 active 顏色 */
+  color: #36c1cb;
 }
 
 .hamburger {
