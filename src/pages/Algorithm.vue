@@ -31,58 +31,26 @@ function locate(idPound) {
 
 <template>
   <div class="sectionHolderNav"></div>
-  <!-- thetopTHETOPtabTAB -->
-  <section>
-    <div class="aboutContainer disCen">
-      <div class="aboutLayout">
-        <div>
-          <br />
-          <h3 class="cor36"># 關於此筆記</h3>
-          <p>Wayne Lu 的學習筆記。</p>
-          <br />
-          <hr />
-          <br />
-          <h3 class="cor36"># 都記錄些什麼?</h3>
-          <p>此筆記主要記錄一些關於前端學習的筆記。</p>
-          <br />
-          <hr />
-          <br />
-          <h3 class="cor36"># 康乃爾筆記法</h3>
-          <p>兩欄筆記法 1. 左邊關鍵字 2. 右邊筆記 3. 下面總結</p>
-          <br />
-          <a
-            href="https://zh.wikipedia.org/zh-tw/%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%B3%95"
-            >康乃爾筆記法 @wiki</a
-          >
-          <br />
-          <p class="comment">
-            大腦中地標 -> 記憶宮殿 -> 透過小紙條or圖 -> 記憶點(畫表情)
-          </p>
-          <br />
-          <hr />
-          <br />
-          <h3 class="cor36"># 費曼學習法</h3>
-          <p>1. 把它教給一個小孩子</p>
-          <p>2. 回顧教學過程(ex腳本,他不懂腳本要在解釋)</p>
-          <p>3. 將語言條理化,簡化</p>
-          <p>4. 傳授真正的人</p>
-          <br />
-          <a href="https://www.youtube.com/watch?v=gcbCXqjicu0"
-            >費曼學習法：快速掌握新知識 @youtube 好葉</a
-          >
-          <br />
-          <hr />
-          <br />
-          <h3 class="cor36"># 工作中如何使用 Git</h3>
-          <br />
-          <a href="https://juejin.cn/post/7165654391511318559">
-            工作中如何使用 Git @掘金 沐华
-          </a>
-        </div>
+  <!-- 左邊導航條 -->
+  <div class="leftNav">
+    <div class="leftNavContainer">
+      <div class="leftNavLayout">
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
       </div>
     </div>
-  </section>
-  <!-- thebottomTHEBOTTOMTABtab -->
+  </div>
+  <!-- maintopMAINTOP -->
+  <!-- 右邊文章內容 -->
+  <div class="Main">
+    <div class="mainContainer">
+      <div class="mainLayout">
+        <div class="articleCardTitle cor36">[ 演算法 ] ≫ 快速排序法</div>
+      </div>
+    </div>
+  </div>
   <div>
     <transition name="fade" tag="div" v-show="toTopRef">
       <div @click="toTopFunction" class="toTop">
@@ -115,25 +83,45 @@ section {
   width: 100vw;
   max-width: 100%;
   background-color: #171717;
+  color: #000;
+  overflow: hidden;
+}
+
+.leftNav {
+  position: fixed;
+  width: 19vw;
+  height: 100%;
+  background-color: #040404;
+  /* color: #36c1cb; */
   color: #a1b6cb;
+  display: flex;
+  justify-content: center;
+}
+
+.leftNavContainer {
+  padding: 25px 5px 0 5px;
+}
+
+.Main {
+  position: relative;
+  /* background-color: #c4c4c4; */
+  /* color: #36c1cb; */
+  color: #a1b6cb;
+  width: 80vw;
+  left: 20vw;
+}
+
+.mainContainer {
+  padding: 0 50px;
+}
+
+.articleCardTitle {
+  font-size: 1.25rem;
+  padding: 30px 5px 30px 5px;
 }
 
 .cor36 {
   color: #36c1cb;
-}
-
-a {
-  display: inline-block;
-  /* 沒互動顏色 */
-  color: #c4c4c4;
-  padding: 5px 0;
-  margin: 0 1;
-  border: 3px solid transparent;
-}
-
-a:hover {
-  /* 滑進時顏色 */
-  color: #3ddbe7;
 }
 
 /* top按鈕的css -------------------------------------------------------*/

@@ -76,11 +76,11 @@
   width: 100vw;
   max-width: 100%;
   height: 100px;
-  background-color: #000;
+  background-color: #171717;
 }
 
 .title {
-  background-color: #000;
+  background-color: #171717;
 }
 
 .titleCard {
@@ -125,7 +125,7 @@ img {
   width: 100vw;
   max-width: 100%;
   /* background-color: #c4c4c4; */
-  background-color: #000;
+  background-color: #171717;
   display: flex;
   justify-content: center;
 }
