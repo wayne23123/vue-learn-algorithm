@@ -2,6 +2,7 @@
 
 <template>
   <div class="sectionHolder"></div>
+  <div class="sectionHolder"></div>
   <div class="disCen title">
     <div class="dis spa titleCard">
       <div>
@@ -10,11 +11,24 @@
         <h3>記錄一些關於前端學習的筆記</h3>
         <br />
         <div class="btnContainer">
-          <div class="btnLeft">Get Sarted</div>
-          <div class="btnRight">View on GitHub</div>
+          <div>
+            <router-link to="/about"
+              ><div class="btnL btn-background-slideL">
+                快速開始
+              </div></router-link
+            >
+          </div>
+          <div>
+            <a href="https://github.com/wayne23123"
+              ><div class="btnR btn-background-slideR">View on GitHub</div>
+            </a>
+          </div>
         </div>
       </div>
-      <img src="../assets/wss.svg" alt="" />
+      <router-link to="/"
+        ><div class="svg">
+          <img src="../assets/wss.svg" alt="" /></div
+      ></router-link>
     </div>
   </div>
   <div class="sectionHolder"></div>
@@ -98,29 +112,6 @@ img {
   justify-content: space-between;
 }
 
-.btnLeft {
-  padding: 15px;
-  background-color: #10b981;
-  color: #c4c4c4;
-  border-radius: 20px;
-}
-
-.btnLeft:hover {
-  background-color: #059669;
-}
-
-.btnRight {
-  padding: 15px;
-  background-color: #313136;
-  color: #c4c4c4;
-  border-radius: 20px;
-  margin-left: 20px;
-}
-
-.btnRight:hover {
-  background-color: #2c2c30;
-}
-
 .fourCard {
   width: 100vw;
   max-width: 100%;
@@ -128,6 +119,12 @@ img {
   background-color: #171717;
   display: flex;
   justify-content: center;
+}
+
+.svg:hover {
+  /* svg 滑進時顏色 */
+  transition: all 0.4s ease;
+  filter: invert(30%) sepia(100%) saturate(500%) hue-rotate(100deg);
 }
 
 .fourCardContainer {
@@ -172,5 +169,103 @@ img {
 
 .corText {
   color: #9c9c9d;
+}
+
+/* 左邊按鈕特效----------------------------------------------- */
+.btnL {
+  /* 按鈕設定 */
+  background-color: #10b981;
+  color: #c4c4c4;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 15px;
+  /* font-size: 22px; */
+
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.btnL.btn-background-slideL::before {
+  /* 滑進的背景色 */
+  background-color: #059669;
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btnL.btn-background-slideL:hover,
+.btnL.btn-background-slideL:focus {
+  /* 滑進的顏色 */
+  color: #36c1cb;
+}
+
+.btnL.btn-background-slideL:hover::before,
+.btnL.btn-background-slideL:focus::before {
+  transform: scaleX(1);
+}
+
+.btnL.btn-background-slideL {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
+}
+
+/* 右邊按鈕特效----------------------------------------------- */
+.btnR {
+  /* 按鈕設定 */
+  background-color: #313136;
+  color: #c4c4c4;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 15px;
+  /* font-size: 22px; */
+
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.btnR.btn-background-slideR::before {
+  /* 滑進的背景色 */
+  background-color: #2c2c30;
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btnR.btn-background-slideR:hover,
+.btnR.btn-background-slideR:focus {
+  /* 滑進的顏色 */
+  color: #36c1cb;
+}
+
+.btnR.btn-background-slideR:hover::before,
+.btnR.btn-background-slideR:focus::before {
+  transform: scaleX(1);
+}
+
+.btnR.btn-background-slideR {
+  transition: color 300ms ease-in-out;
+  z-index: 1;
 }
 </style>

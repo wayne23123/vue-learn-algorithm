@@ -48,7 +48,10 @@ function locate(idPound) {
           <hr />
           <br />
           <h3 class="cor36"># 康乃爾筆記法</h3>
-          <p>兩欄筆記法 1. 左邊關鍵字 2. 右邊筆記 3. 下面總結</p>
+          <p>兩欄筆記法</p>
+          <p class="pFou">1. 左邊關鍵字</p>
+          <p class="pFou">2. 右邊筆記</p>
+          <p class="pFou">3. 下面總結</p>
           <br />
           <a
             href="https://zh.wikipedia.org/zh-tw/%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%B3%95"

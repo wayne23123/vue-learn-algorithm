@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Layout from "../pages/Layout.vue";
-import HomePage from "../pages/HomePage.vue";
-import AboutPage from "../pages/AboutPage.vue";
-import Algorithm from "../pages/Algorithm.vue";
+import Layout from "../views/Layout.vue";
+import HomePage from "../views/HomePage.vue";
+import AboutPage from "../views/AboutPage.vue";
+import Algorithm from "../views/Algorithm.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
