@@ -20,10 +20,13 @@
           >
         </li>
         <li>
-          <router-link to="/about"
-            ><div class="liPad">leetcode</div></router-link
-          >
+          <router-link to="/css"><div class="liPad">Leetcode</div></router-link>
         </li>
+        <!-- <li>
+          <router-link to="/js"
+            ><div class="liPad">JavaScript</div></router-link
+          >
+        </li> -->
       </ul>
     </nav>
     <label for="nav_check" class="hamburger">
@@ -38,12 +41,12 @@
 header {
   position: fixed;
   background: #000;
-  height: 70px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
+  z-index: 101;
 }
 
 nav {
@@ -54,8 +57,13 @@ ul {
   display: flex;
 }
 
+li {
+  font-size: 30px;
+}
+
 .liPad {
-  padding: 0 25px;
+  /* padding: 0 25px; */
+  padding: 0 5px;
 }
 
 .borR {
@@ -98,11 +106,11 @@ a.router-link-exact-active {
   margin: 5px 0;
   background-color: #c4c4c4;
 }
-@media only screen and (max-width: 900px) {
+/* @media only screen and (max-width: 900px) {
   header {
     padding: 0 30px;
   }
-}
+} */
 @media only screen and (max-width: 700px) {
   .hamburger {
     display: block;
@@ -111,7 +119,7 @@ a.router-link-exact-active {
     position: absolute;
     width: 100%;
     left: -100%;
-    top: 70px;
+    top: 90px;
     width: 100%;
     background-color: #565656;
     padding: 30px;
