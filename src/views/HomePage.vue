@@ -4,8 +4,8 @@
   <div class="sectionHolder"></div>
   <div class="sectionHolder"></div>
   <div class="disCen title">
-    <div class="dis spa titleCard">
-      <div>
+    <div class="titleCard">
+      <div class="titleCardLeft">
         <h1>Wayne's Blog</h1>
         <h1>前端學習筆記</h1>
         <h3>記錄一些關於前端學習的筆記</h3>
@@ -25,10 +25,12 @@
           </div>
         </div>
       </div>
-      <router-link to="/"
-        ><div class="svg">
-          <img src="../assets/wss.svg" alt="" /></div
-      ></router-link>
+      <div class="titleCardRight">
+        <router-link to="/"
+          ><div class="svg cardRightImgLayout">
+            <img src="../assets/wss.svg" alt="" /></div
+        ></router-link>
+      </div>
     </div>
   </div>
   <div class="sectionHolder"></div>
@@ -86,6 +88,11 @@
 </template>
 
 <style scoped>
+section {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+}
 .sectionHolder {
   width: 100vw;
   max-width: 100%;
@@ -98,12 +105,48 @@
 }
 
 .titleCard {
+  width: 76vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* background-color: #c4c4c4; */
+}
+
+.titleCardLeft {
   width: 500px;
+  /* background-color: #000; */
+}
+
+.titleCardRight {
+  width: 400px;
+  margin: 50px;
+  /* background-color: #565656; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 26px;
+}
+
+.cardRightImgLayout {
+  /* background-color: #c4c4c4; */
+  width: 300px;
+  height: 300px;
 }
 
 img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
 }
 
 .btnContainer {
@@ -128,11 +171,12 @@ img {
 }
 
 .fourCardContainer {
-  width: 85vw;
+  width: 90vw;
   /* background-color: #565656; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 0 0 100px 0;
 }
 
 .cardContainer {
@@ -140,8 +184,8 @@ img {
 }
 
 .card {
-  width: 200px;
-  height: 240px;
+  width: 300px;
+  padding: 30px;
   background-color: #252529;
   border-radius: 15px;
   overflow: hidden;
@@ -179,7 +223,7 @@ img {
   border-radius: 20px;
   overflow: hidden;
   padding: 15px;
-  /* font-size: 22px; */
+  font-size: 26px;
 
   border: none;
   outline: none;
@@ -228,7 +272,8 @@ img {
   border-radius: 20px;
   overflow: hidden;
   padding: 15px;
-  /* font-size: 22px; */
+
+  font-size: 26px;
 
   border: none;
   outline: none;

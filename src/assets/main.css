@@ -24,6 +24,72 @@ button {
   border: none;
 }
 
+.fz6 {
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+}
+
+.fz12 {
+  font-size: 12px;
+}
+
+.fz14 {
+  font-size: 14px;
+}
+
+.fz16 {
+  font-size: 16px;
+}
+
+.fz18 {
+  font-size: 18px;
+}
+
+.fz20 {
+  font-size: 20px;
+}
+
+.fz22 {
+  font-size: 22px;
+}
+
+.fz24 {
+  font-size: 24px;
+}
+
+.fz26 {
+  font-size: 26px;
+}
+
+.fz28 {
+  font-size: 28px;
+}
+
+.fz30 {
+  font-size: 30px;
+}
+
+.fz32 {
+  font-size: 32px;
+}
+
+.fz34 {
+  font-size: 34px;
+}
+
+.fz36 {
+  font-size: 36px;
+}
+
+.fz38 {
+  font-size: 38px;
+}
+
+.fz40 {
+  font-size: 40px;
+}
+
 /* -------------------------------------------------------------------------- */
 .svgs:hover {
   filter: invert(30%) sepia(100%) saturate(2000%) hue-rotate(100deg);
@@ -227,66 +293,58 @@ button {
 }
 
 /* A CSS 模板 ------------------------------------------------------------------------------------------------- */
-
-/* V 切換 dark 模式的外觀 --------------------------------------------------------------- */
-.switchBall {
-  background-color: var(--black);
-  color: var(--gray);
-  transition: all var(--darkMode) ease;
-  width: 25px;
-  height: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.swiBall {
-  padding-left: 1px;
-  transition: all 0.5s ease;
-  pointer-events: none;
-}
-/* A 切換 dark 模式的外觀 --------------------------------------------------------------- */
 /* V 右下角 TOP 外觀 --------------------------------------------------------------- */
-
+/* 
 .toTop {
-  /* bottom: 50px; */
-  bottom: 20vh;
-  /* right: 200px; */
-  right: 100px;
+  bottom: 170px;
+  right: 50px;
   position: fixed;
-  z-index: 100;
-  background-color: #6f0202;
-  height: 40px;
-  width: 40px;
+  z-index: 200;
+  background-color: #7f010190;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .toTopButton {
   position: relative;
+  font-size: 20px;
   bottom: 7px;
   padding-left: 0;
   color: #999;
   pointer-events: none;
 }
 
-@media screen and (max-width: 1000px) {
-  .toTop {
-    /* right: 150px; */
-    right: 75px;
-  }
+.toTop:hover {
+  background-color: #6f020250;
 }
 
-@media screen and (max-width: 800px) {
-  .toTop {
-    /* right: 100px; */
-    right: 50px;
-  }
+.toBot {
+  bottom: 100px;
+  right: 50px;
+  position: fixed;
+  z-index: 200;
+  background-color: #7f010190;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toBot:hover {
+  background-color: #6f020250;
 }
 
-@media screen and (max-width: 600px) {
-  .toTop {
-    /* right: 70px; */
-    right: 35px;
-  }
+.toBotButton {
+  position: relative;
+  font-size: 20px;
+  bottom: 0;
+  padding-left: 0;
+  color: #999;
+  pointer-events: none;
+} */
+
+@media screen and (max-width: 700px) {
 }
 
 /* A 右下角 TOP 外觀 --------------------------------------------------------------- */
