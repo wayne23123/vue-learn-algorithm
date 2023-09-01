@@ -27,6 +27,11 @@ function locate(idPound) {
     behavior: "smooth",
   });
 }
+
+const engRef = ref(false);
+function engRefF() {
+  engRef.value = true;
+}
 </script>
 
 <template>
@@ -34,8 +39,8 @@ function locate(idPound) {
   <!-- thetopTHETOPtabTAB -->
   <section>
     <div class="aboutContainer disCen">
-      <div class="aboutLayout">
-        <div>
+      <div>
+        <div class="aboutLayout">
           <br />
           <h3 class="cor36"># 關於此筆記</h3>
           <p>Wayne Lu 的學習筆記。</p>
@@ -48,7 +53,10 @@ function locate(idPound) {
           <hr />
           <br />
           <h3 class="cor36"># 康乃爾筆記法</h3>
-          <p>兩欄筆記法 1. 左邊關鍵字 2. 右邊筆記 3. 下面總結</p>
+          <p>兩欄筆記法</p>
+          <p class="pFou">1. 左邊關鍵字</p>
+          <p class="pFou">2. 右邊筆記</p>
+          <p class="pFou">3. 下面總結</p>
           <br />
           <a
             href="https://zh.wikipedia.org/zh-tw/%E5%BA%B7%E5%A5%88%E5%B0%94%E7%AC%94%E8%AE%B0%E6%B3%95"
@@ -63,9 +71,9 @@ function locate(idPound) {
           <br />
           <h3 class="cor36"># 費曼學習法</h3>
           <p>1. 把它教給一個小孩子</p>
-          <p>2. 回顧教學過程(ex腳本,他不懂腳本要在解釋)</p>
+          <p>2. 回顧教學過程(ex腳本,他不懂腳本要再解釋)</p>
           <p>3. 將語言條理化,簡化</p>
-          <p>4. 教一個大人</p>
+          <p>4. 把它教給一個大人</p>
           <br />
           <a href="https://www.youtube.com/watch?v=gcbCXqjicu0"
             >費曼學習法：快速掌握新知識 @youtube 好葉</a
@@ -124,6 +132,15 @@ function locate(idPound) {
             >真正的快樂處方 @youtube 文森說書</a
           >
           <br />
+          <!-- <a href="https://www.youtube.com/watch?v=T6vwvui2EWI&list=PLJ2qsHXnALwGGLl6ID6lPKY1AIlee3ITv&index=2&t=608s"></a> -->
+          <!-- https://home.gamer.com.tw/artwork.php?sn=5777104 -->
+          <!-- ⚠ -->
+          <div @click="engRefF()" style="color: #171717">test</div>
+          <div v-if="engRef">
+            <hr />
+            <br />
+            <p>Http . . . 超文本傳輸協定</p>
+          </div>
         </div>
       </div>
     </div>
@@ -189,52 +206,5 @@ a {
 a:hover {
   /* 滑進時顏色 */
   color: #3ddbe7;
-}
-
-/* top按鈕的css -------------------------------------------------------*/
-.toTop {
-  bottom: 170px;
-  right: 50px;
-  position: fixed;
-  z-index: 200;
-  background-color: #7f010190;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.toTop:hover {
-  background-color: #6f020250;
-}
-.toTopButton {
-  position: relative;
-  font-size: 20px;
-  bottom: 7px;
-  padding-left: 0;
-  color: #999;
-  pointer-events: none;
-}
-.toBot {
-  bottom: 100px;
-  right: 50px;
-  position: fixed;
-  z-index: 200;
-  background-color: #7f010190;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.toBot:hover {
-  background-color: #6f020250;
-}
-
-.toBotButton {
-  position: relative;
-  font-size: 20px;
-  bottom: 0;
-  padding-left: 0;
-  color: #999;
-  pointer-events: none;
 }
 </style>

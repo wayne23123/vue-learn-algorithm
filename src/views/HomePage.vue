@@ -1,90 +1,91 @@
 <script setup></script>
 
 <template>
-  <div class="sectionHolder"></div>
-  <div class="sectionHolder"></div>
-  <div class="disCen title">
-    <div class="titleCard">
-      <div class="titleCardLeft">
-        <h1>Wayne's Blog</h1>
-        <h1>前端學習筆記</h1>
-        <h3>記錄一些關於前端學習的筆記</h3>
-        <br />
-        <div class="btnContainer">
-          <div>
-            <router-link to="/about"
-              ><div class="btnL btn-background-slideL">
-                快速開始
-              </div></router-link
-            >
-          </div>
-          <div>
-            <a href="https://github.com/wayne23123"
-              ><div class="btnR btn-background-slideR">View on GitHub</div>
-            </a>
+  <section>
+    <div class="sectionHolder"></div>
+    <div class="sectionHolder"></div>
+    <div class="disCen title">
+      <div class="titleCard">
+        <div class="titleCardLeft">
+          <h1>Wayne's Blog</h1>
+          <h1>前端學習筆記</h1>
+          <h3>記錄一些關於前端學習的筆記</h3>
+          <br />
+          <div class="btnContainer">
+            <div>
+              <router-link to="/al"
+                ><div class="btnL btn-background-slideL">
+                  快速開始
+                </div></router-link
+              >
+            </div>
+            <div>
+              <a href="https://github.com/wayne23123"
+                ><div class="btnR btn-background-slideR">View on GitHub</div>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="titleCardRight">
-        <router-link to="/"
-          ><div class="svg cardRightImgLayout">
-            <img src="../assets/wss.svg" alt="" /></div
-        ></router-link>
-      </div>
-    </div>
-  </div>
-  <div class="sectionHolder"></div>
-  <div class="fourCard">
-    <div class="fourCardContainer">
-      <div class="cardContainer">
-        <div class="card">
-          <div class="cardLayout">
-            <div class="cardTop">
-              <span class="cardTopBGC">💡</span>
-            </div>
-            <h3 class="corTitle">About Me</h3>
-            <p class="corText">
-              Hi, I'm Wayne Lu, <br />
-              a passionate frontend developer from Taiwan.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="cardContainer">
-        <div class="card">
-          <div class="cardLayout">
-            <div class="cardTop">
-              <span class="cardTopBGC">💻</span>
-            </div>
-            <h3 class="corTitle">Languages</h3>
-            <p class="corText">JavaScript</p>
-          </div>
-        </div>
-      </div>
-      <div class="cardContainer">
-        <div class="card">
-          <div class="cardLayout">
-            <div class="cardTop">
-              <span class="cardTopBGC">📚</span>
-            </div>
-            <h3 class="corTitle">Frontend Skills</h3>
-            <p class="corText">Vue</p>
-          </div>
-        </div>
-      </div>
-      <div class="cardContainer">
-        <div class="card">
-          <div class="cardLayout">
-            <div class="cardTop">
-              <span class="cardTopBGC">🛠️</span>
-            </div>
-            <h3 class="corTitle">Tools</h3>
-            <p class="corText">Vite、Webpack</p>
-          </div>
+        <div class="titleCardRight">
+          <router-link to="/"
+            ><div class="cardRightImgLayout svg">
+              <img src="../assets/wss.svg" alt="" /></div
+          ></router-link>
         </div>
       </div>
     </div>
-  </div>
+    <div class="fourCard">
+      <div class="fourCardContainer">
+        <div class="cardContainer">
+          <div class="card">
+            <div class="cardLayout">
+              <div class="cardTop disCen">
+                <span class="cardTopBGC">💡</span>
+              </div>
+              <h3 class="corTitle disCen">About Me</h3>
+              <p class="corText">
+                Hi, I'm Wayne Lu, <br />
+                a passionate frontend developer from Taiwan.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="cardContainer">
+          <div class="card">
+            <div class="cardLayout">
+              <div class="cardTop disCen">
+                <span class="cardTopBGC">💻</span>
+              </div>
+              <h3 class="corTitle disCen">Languages</h3>
+              <p class="corText">JavaScript</p>
+            </div>
+          </div>
+        </div>
+        <div class="cardContainer">
+          <div class="card">
+            <div class="cardLayout">
+              <div class="cardTop disCen">
+                <span class="cardTopBGC">📚</span>
+              </div>
+              <h3 class="corTitle disCen">Frontend Skills</h3>
+              <p class="corText">Vue</p>
+            </div>
+          </div>
+        </div>
+        <div class="cardContainer">
+          <div class="card">
+            <div class="cardLayout">
+              <div class="cardTop disCen">
+                <span class="cardTopBGC">🛠️</span>
+              </div>
+              <h3 class="corTitle disCen">Tools</h3>
+              <p class="corText">Vite、Webpack</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
@@ -185,7 +186,7 @@ img {
 
 .card {
   width: 300px;
-  padding: 30px;
+  padding: 30px 30px 50px 30px;
   background-color: #252529;
   border-radius: 15px;
   overflow: hidden;

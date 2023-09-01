@@ -30,27 +30,31 @@ function locate(idPound) {
 </script>
 
 <template>
-  <div class="sectionHolderNav"></div>
-  <!-- 左邊導航條 -->
-  <div class="leftNav">
-    <div class="leftNavContainer">
-      <div class="leftNavLayout">
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
+  <section>
+    <!-- <div class="sectionHolderNav"></div> -->
+    <!-- 左邊導航條 -->
+    <div class="leftNav">
+      <div class="leftNavContainer">
+        <div class="leftNavLayout">
+          <div @click="locate('')" class="leftNavText"></div>
+          <div @click="locate('')" class="leftNavText"></div>
+          <div @click="locate('')" class="leftNavText"></div>
+          <div @click="locate('')" class="leftNavText"></div>
+          <div @click="locate('')" class="leftNavText"></div>
+          <div @click="locate('')" class="leftNavText"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- maintopMAINTOP -->
-  <!-- 右邊文章內容 -->
-  <div class="Main">
-    <div class="mainContainer">
-      <div class="mainLayout">
-        <div class="articleCardTitle cor36">[ 演算法 ] ≫ 快速排序法</div>
+    <!-- maintopMAINTOP -->
+    <!-- 右邊文章內容 -->
+    <div class="Main">
+      <div class="mainContainer">
+        <div class="mainLayout">
+          <!-- 這裡 -->
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   <div>
     <transition name="fade" tag="div" v-show="toTopRef">
       <div @click="toTopFunction" class="toTop">
@@ -72,13 +76,6 @@ function locate(idPound) {
 </template>
 
 <style scoped>
-.sectionHolderNav {
-  width: 100vw;
-  max-width: 100%;
-  height: 70px;
-  background-color: 171717;
-}
-
 section {
   width: 100vw;
   max-width: 100%;
@@ -88,27 +85,46 @@ section {
 }
 
 .leftNav {
+  font-size: 20px;
   position: fixed;
-  width: 19vw;
-  height: 100%;
-  background-color: #040404;
+  right: 80px;
+  top: 150px;
+  /* width: 19vw; */
+  /* height: 100%; */
+  /* background-color: #040404; */
+  background-color: rgba(0, 0, 0, 0.1);
   /* color: #36c1cb; */
-  color: #a1b6cb;
+  color: #a1b6cb4b;
   display: flex;
   justify-content: center;
+  overflow: auto;
+}
+
+.leftNav:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* color: #36c1cb; */
+  color: #a1b6cb;
+  transition: all 0.2s ease;
 }
 
 .leftNavContainer {
-  padding: 25px 5px 0 5px;
+  /* padding: 25px 5px 0 5px; */
+  padding: 25px;
+}
+
+.leftNavText:hover {
+  color: #36c1cb;
+  background-color: #1c1c1c;
+  cursor: pointer;
 }
 
 .Main {
-  position: relative;
+  /* position: relative; */
   /* background-color: #c4c4c4; */
   /* color: #36c1cb; */
   color: #a1b6cb;
-  width: 80vw;
-  left: 20vw;
+  /* width: 80vw; */
+  /* left: 20vw; */
 }
 
 .mainContainer {
@@ -116,7 +132,6 @@ section {
 }
 
 .articleCardTitle {
-  font-size: 1.25rem;
   padding: 30px 5px 30px 5px;
 }
 
@@ -124,44 +139,17 @@ section {
   color: #36c1cb;
 }
 
-/* top按鈕的css -------------------------------------------------------*/
-.toTop {
-  /* bottom: 50px; */
-  bottom: 20vh;
-  /* right: 200px; */
-  right: 10px;
-  position: fixed;
-  z-index: 100;
-  background-color: #6f020290;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  cursor: pointer;
+a {
+  display: inline-block;
+  /* 沒互動顏色 */
+  color: #c4c4c4;
+  padding: 5px 0;
+  margin: 0 1;
+  border: 3px solid transparent;
 }
-.toTop:hover {
-  background-color: #6f020250;
-}
-.toTopButton {
-  position: relative;
-  bottom: 7px;
-  padding-left: 0;
-  color: #999;
-  pointer-events: none;
-}
-.toBot {
-  /* bottom: 50px; */
-  bottom: 10vh;
-  /* right: 200px; */
-  right: 10px;
-  position: fixed;
-  z-index: 100;
-  background-color: #6f020290;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.toBot:hover {
-  background-color: #6f020250;
+
+a:hover {
+  /* 滑進時顏色 */
+  color: #3ddbe7;
 }
 </style>

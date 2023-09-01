@@ -1,7 +1,15 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const navFixedRef = ref(true);
+window.addEventListener("scroll", function () {
+  // 當 scrollY大於290 則 carouselShopShowRef 為 true
+  navFixedRef.value = window.scrollY;
+});
+</script>
 
 <template>
-  <header>
+  <header :class="{ show: navFixedRef > 0 }">
     <div class="">
       <router-link to="/"
         ><div class="svg imgLayout">
@@ -33,13 +41,23 @@
 
 <style scoped>
 header {
+  position: fixed;
+  opacity: 0;
+  transform: translateX(-100%);
+
   background: #000;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  z-index: 100;
+  z-index: 101;
+}
+
+.show {
+  opacity: 1;
+  transform: none;
+  transition: all 0.3s ease;
 }
 
 nav {
@@ -89,6 +107,7 @@ a:hover {
 } */
 
 a.router-link-active {
+  /* 到頁面 active 顏色 */
   color: #36c1cb;
 }
 

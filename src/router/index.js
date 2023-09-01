@@ -1,27 +1,35 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Layout from "../views/Layout.vue";
-import HomePage from "../views/HomePage.vue";
-import AboutPage from "../views/AboutPage.vue";
-import Algorithm from "../views/Algorithm.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
-      component: Layout,
+      component: () => import("../views/Layout.vue"),
       children: [
         {
           path: "",
-          component: HomePage,
+          component: () => import("../views/HomePage.vue"),
         },
         {
           path: "about",
-          component: AboutPage,
+          component: () => import("../views/AboutPage.vue"),
         },
         {
-          path: "algorithm",
-          component: Algorithm,
+          path: "al",
+          component: () => import("../views/AlPageLayout.vue"),
+          children: [
+            {
+              path: "",
+              component: () => import("../views/AlPage/AlPageOne.vue"),
+              children: [
+                {
+                  path: "",
+                  component: () => import("../views/AlPage/AlPageOneOne.vue"),
+                },
+              ],
+            },
+          ],
         },
       ],
     },
