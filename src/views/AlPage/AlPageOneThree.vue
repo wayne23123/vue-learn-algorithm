@@ -51,6 +51,401 @@ function locate(idPound) {
       <div class="mainContainer">
         <div class="mainLayout">
           <!-- 這裡 -->
+          <br />
+          <br />
+          <p class="fz30 cor36">隊列 ( Queue )</p>
+          <br />
+          <p class="fz30">
+            <a
+              href="https://en.wikipedia.org/wiki/Queue_%28abstract_data_type%29"
+              >queue @wiki</a
+            >
+          </p>
+          <br />
+
+          <p class="fz30">
+            他是一種 受限 的 線性結構 , 只允許在前端 刪除元素 , 在後端 插入元素
+            , 並符合 先進先出 ( FIFO ) ( first in first out )
+          </p>
+          <br />
+          <br />
+          <br />
+
+          <p class="fz30">先進先出 ( FIFO ) ( first in first out )</p>
+          <br />
+          <p class="fz30">只能在 表的 前端 進行 刪除</p>
+          <br />
+
+          <p class="fz30">在 表的 後端 進行插入</p>
+          <br />
+
+          <p class="fz30 cor36"># 隊列操作</p>
+          <br />
+
+          <p class="fz30">
+            enqueue(元素) 向 隊列尾部 添加 一個 (或多個) 新的項
+          </p>
+          <br />
+
+          <p class="fz30">dequeue() 移除隊列的第一項 , 並返回 被移除的元素</p>
+          <br />
+          <p class="fz30">front() 返回隊列中 第一個元素 , 隊列不做改變</p>
+          <br />
+          <p class="fz30">isEmpty() 隊列中不包含任何元素 返回 true</p>
+          <br />
+
+          <p class="fz30">size() 返回隊列包含的元素個數 , 類似數組.length</p>
+          <br />
+
+          <p class="fz30">toString() 將隊列中內容 轉成字串形式</p>
+          <br />
+
+          <div class="bgcVS">
+            <p>基於數組實現</p>
+            <br />
+            <div>
+              <span class="function">function </span>
+              <span class="word">Queue</span> <span class="brackets">(){</span>
+            </div>
+            <div class="padTwo VSL">
+              <span class="comment">//屬性</span>
+              <div>
+                <span class="then">this</span> <span class="word">.items</span>
+                <span class="then">=</span> <span class="brackets">[]</span>
+              </div>
+              <br />
+
+              <div><span class="comment">//方法</span></div>
+              <div><span class="comment">//1.將元素加入到隊列中</span></div>
+              <div>
+                <span class="word">Queue.</span>
+                <span class="variable">prototype.enqueue</span>
+                <span class="then">=</span>
+                <span class="function">function </span>
+                <span class="brackets">(</span>
+                <span class="word">element</span>
+                <span class="brackets">){</span>
+              </div>
+              <div class="padTwo VSL">
+                <span class="then">return this</span>
+                <span class="word">.items</span>
+                <span class="variable">.push</span>
+                <span class="brackets">(</span>
+                <span class="word">element</span>
+                <span class="brackets">)</span>
+                <div></div>
+              </div>
+
+              <div><span class="brackets">}</span></div>
+              <br />
+              <div><span class="comment">//2.從隊列中刪除前端元素</span></div>
+
+              <div>
+                <span class="word">Queue</span>
+                <span class="variable">.prototype.dequeue</span>
+                <span class="then">=</span>
+                <span class="function">function </span>
+                <span class="brackets">(){</span>
+              </div>
+              <div class="padTwo VSL">
+                <span class="then">return this </span>
+                <span class="word">.items</span>
+                <span class="variable">.shift</span>
+                <span class="brackets">()</span>
+                <div></div>
+              </div>
+
+              <div><span class="brackets">}</span></div>
+              <br />
+              <div><span class="comment">//3.查看前端元素</span></div>
+
+              <div>
+                <span class="word">Queue</span>
+                <span class="variable">.prototype.front</span>
+                <span class="then">=</span>
+                <span class="function">function </span>
+                <span class="brackets">(){</span>
+              </div>
+              <div class="padTwo VSL">
+                <span class="then">return this </span>
+                <span class="word">.item</span> <span class="brackets">[</span>
+                <span class="number">0</span> <span class="brackets">]</span>
+                <div></div>
+              </div>
+
+              <div><span class="brackets">}</span></div>
+              <br />
+              <div><span class="comment">//4.查看隊列是否為空</span></div>
+
+              <div>
+                <span class="word">Queue</span>
+                <span class="variable">.prototype.isEmpty</span>
+                <span class="then">=</span>
+                <span class="function">function </span>
+                <span class="brackets">(){</span>
+              </div>
+              <div class="padTwo VSL">
+                <span class="then">return this </span>
+                <span class="word">.items</span>
+                <span class="variable">.length</span>
+                <span class="then">==</span> <span class="number">0</span>
+                <div></div>
+              </div>
+
+              <div><span class="brackets">}</span></div>
+              <br />
+              <div><span class="comment">//5.查看隊列中元素個數</span></div>
+
+              <div>
+                <span class="word">Queue</span>
+                <span class="variable">.prototype.size</span>
+                <span class="then">=</span>
+                <span class="function">function </span>
+                <span class="brackets">(){</span>
+              </div>
+              <div class="padTwo VSL">
+                <span class="then">return this </span>
+                <span class="word">.items</span>
+                <span class="variable">.length</span>
+                <div></div>
+              </div>
+
+              <div><span class="brackets">}</span></div>
+              <br />
+              <div><span class="comment">//6.toString方法</span></div>
+
+              <div>
+                <span class="word">Queue</span>
+                <span class="variable">.prototype.toString</span>
+                <span class="then">=</span>
+                <span class="function">function </span>
+                <span class="brackets">(){</span>
+              </div>
+
+              <div class="padTwo VSL">
+                <span class="function">let </span>
+                <span class="word">resultString</span>
+                <span class="then">=</span> <span class="src">""</span>
+                <div>
+                  <span class="then">for </span>
+                  <span class="brackets">(</span>
+                  <span class="function">let </span>
+                  <span class="word">i</span> <span class="then">=</span>
+                  <span class="number">0</span> <span class="then">;</span>
+                  <span class="word">i</span> <span class="then">＜</span>
+                  <span class="then">this</span>
+                  <span class="word">.items</span>
+                  <span class="variable">.length</span>
+                  <span class="then">;</span> <span class="word">i</span>
+                  <span class="then">++</span> <span class="brackets">){</span>
+                </div>
+                <div></div>
+
+                <div class="padTwo VSL">
+                  <span class="word">resultString</span>
+                  <span class="then">+=</span> <span class="then">this</span>
+                  <span class="word">.items</span>
+                  <span class="brackets">[</span> <span class="word">i</span>
+                  <span class="brackets">]</span> <span class="then">+</span>
+                  <span class="src">" "</span>
+                  <div>
+                    <span class="comment"
+                      >//resultString=resultString+this.items[i]+""</span
+                    >
+                  </div>
+                  <div></div>
+                </div>
+                <div><span class="brackets">}</span></div>
+                <div>
+                  <span class="then">return </span>
+                  <span class="word">resultString</span>
+                </div>
+              </div>
+              <div><span class="brackets">}</span></div>
+
+              <div></div>
+            </div>
+            <div><span class="brackets">}</span></div>
+            <br />
+            <div><span class="comment">//使用隊列</span></div>
+            <div>
+              <span class="function">let </span>
+              <span class="word">queue</span> <span class="then">= new </span>
+              <span class="word">Queue</span> <span class="brackets">()</span>
+            </div>
+            <br />
+            <div>
+              <span class="word">queue</span>
+              <span class="variable">.enqueue</span>
+              <span class="brackets">(</span> <span class="src">"abc"</span>
+              <span class="brackets">)</span>
+            </div>
+            <div>
+              <span class="word">queue</span>
+              <span class="variable">.enqueue</span>
+              <span class="brackets">(</span> <span class="src">"bca"</span>
+              <span class="brackets">)</span>
+            </div>
+
+            <p class="comment">基於鏈表實現</p>
+          </div>
+
+          <br />
+          <p class="fz28 cor36"># 擊鼓傳花</p>
+          <br />
+          <p class="fz28">學生圍一圈 , 某同學開始向旁邊同學傳花</p>
+          <br />
+          <p class="fz28">某人擊鼓 , 當鼓聲停下 , 花在誰手裡?</p>
+          <br />
+          <p class="fz28 cor36"># 題目</p>
+          <br />
+          <p class="fz28">幾個人圍一圈 , 開始數數 ex 數到 5 人淘汰</p>
+          <br />
+          <p class="fz28">
+            最後剩下的這個人勝利 , 請問最後剩下的 原來在哪一個位置?
+          </p>
+          <div class="bgcVS">
+            <div>
+              <span class="function">function </span>
+              <span class="word">passGame</span>
+              <span class="brackets">(</span>
+              <span class="word">nameList,num</span>
+              <span class="brackets">)</span>
+            </div>
+            <div class="padTwo VSL">
+              <span class="comment">//1.創建一個隊列結構</span>
+              <div>
+                <span class="function">let </span>
+                <span class="word">queue</span>
+                <span class="then">= new </span>
+                <span class="word">Queue</span> <span class="brackets">()</span>
+              </div>
+              <br />
+              <div><span class="comment">//2.將所有人依次加到隊列中</span></div>
+              <div>
+                <span class="then">for </span> <span class="brackets">(</span>
+                <span class="function">let </span> <span class="word">i</span>
+                <span class="then">=</span> <span class="number">0</span>
+                <span class="then">;</span> <span class="word">i</span>
+                <span class="then">＜</span> <span class="word">nameList</span>
+                <span class="variable">.length</span>
+                <span class="then">;</span> <span class="word">i</span>
+                <span class="then">++</span> <span class="brackets">){</span>
+              </div>
+              <div class="padTwo VSL">
+                <span class="word">queue</span>
+                <span class="word">.enqueue</span>
+                <span class="brackets">(</span>
+                <span class="word">nameList</span>
+                <span class="brackets">[</span> <span class="word">i</span>
+                <span class="brackets">])</span>
+                <div></div>
+              </div>
+              <div><span class="brackets">}</span></div>
+              <br />
+              <div><span class="comment">//3.開始數數字</span></div>
+              <div>
+                <span class="comment"
+                  >// 不是 num 時 , 重新加入到 隊列 末尾</span
+                >
+              </div>
+              <div>
+                <span class="comment"
+                  >// 是 num 這數字時 , 將其從 隊列中 刪除</span
+                >
+              </div>
+              <br />
+              <div>
+                <span class="comment"
+                  >//3.1num數字之前的人重新放入隊列的末尾</span
+                >
+              </div>
+              <div>
+                <span class="comment">for (let i = 0;i ＜ num - 1 ; i++){</span>
+              </div>
+              <div>
+                <span class="comment padTwo"
+                  >queue.enqueue(queue.dequeue() )</span
+                >
+              </div>
+              <div>
+                <span class="comment">}</span>
+              </div>
+              <div>
+                <span class="comment">//3.2對應這個人 , 直接從隊列中刪除</span>
+              </div>
+              <div>
+                <span class="comment">queue.dequeue()</span>
+              </div>
+              <br />
+              <div>
+                <span class="function">while</span>
+                <span class="brackets">(</span> <span class="word">queue</span>
+                <span class="variable">.size</span>
+                <span class="brackets">()</span> <span class="then">></span>
+                <span class="number">1</span> <span class="brackets">){</span>
+              </div>
+
+              <div></div>
+
+              <div class="padTwo VSL">
+                <span class="comment"
+                  >//3.1num數字之前的人重新放入隊列的末尾</span
+                >
+                <span class="word"></span>
+                <div>
+                  <span class="then">for </span>
+                  <span class="brackets">(</span>
+                  <span class="function">let </span>
+                  <span class="word">i</span> <span class="then">=</span>
+                  <span class="number">0</span> <span class="then">;</span>
+                  <span class="word">i</span> <span class="then">＜</span>
+                  <span class="word">num</span> <span class="then">-</span>
+                  <span class="number">1</span> <span class="then">;</span>
+                  <span class="word">i</span> <span class="then">++</span>
+                  <span class="brackets">){</span>
+                </div>
+
+                <div></div>
+                <div class="padTwo VSL">
+                  <span class="word">queue</span>
+                  <span class="variable">.enqueue</span>
+                  <span class="brackets">(</span>
+                  <span class="word">queue</span>
+                  <span class="variable">.dequeue</span>
+                  <span class="brackets">())</span>
+                </div>
+                <div><span class="brackets">}</span></div>
+                <div>
+                  <span class="comment">//3.2對應這個人,直接從隊列中刪除</span>
+                </div>
+                <div>
+                  <span class="word">queue</span>
+                  <span class="variable">.dequeue</span>
+                  <span class="brackets">()</span>
+                </div>
+              </div>
+              <div><span class="brackets">}</span></div>
+              <br />
+              <div><span class="comment">//4.獲取剩下的那個人</span></div>
+              <div>
+                <span class="function">let </span>
+                <span class="word">endName</span> <span class="then">=</span>
+                <span class="word">queue</span>
+                <span class="variable">.front</span>
+                <span class="brackets">()</span>
+              </div>
+              <div>
+                <span class="then">return </span>
+                <span class="word">nameList</span>
+                <span class="variable">.indexOf</span>
+                <span class="brackets">(</span>
+                <span class="word">endName</span>
+                <span class="brackets">)</span>
+              </div>
+            </div>
+            <div><span class="brackets">}</span></div>
+          </div>
         </div>
       </div>
     </div>

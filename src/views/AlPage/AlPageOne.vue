@@ -45,7 +45,7 @@ function locate(idPound) {
             <RouterLink to="/al/stack">2. 棧結構</RouterLink>
           </div>
           <div>
-            <RouterLink to="/"></RouterLink>
+            <RouterLink to="/al/queue">3. 隊列結構</RouterLink>
           </div>
           <div>
             <RouterLink to="/"></RouterLink>

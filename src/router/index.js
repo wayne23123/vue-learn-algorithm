@@ -31,6 +31,10 @@ const router = createRouter({
                   path: "stack",
                   component: () => import("../views/AlPage/AlPageOneTwo.vue"),
                 },
+                {
+                  path: "queue",
+                  component: () => import("../views/AlPage/AlPageOneThree.vue"),
+                },
               ],
             },
           ],

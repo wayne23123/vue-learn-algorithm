@@ -53,6 +53,13 @@ function locate(idPound) {
           <!-- 這裡 -->
           <br />
           <br />
+
+          <p class="fz30">
+            隊列 是一種 受限 的 線性結構 , 只允許在前端 刪除元素 , 在後端
+            插入元素 , 並符合 先進先出 ( FIFO ) ( first in first out )
+          </p>
+          <br />
+          <br />
           <div id="oneData001" class="articleCardTitle">
             [ 數據結構 ] ≫ 數組
           </div>
