@@ -27,6 +27,10 @@ const router = createRouter({
                   path: "",
                   component: () => import("../views/AlPage/AlPageOneOne.vue"),
                 },
+                {
+                  path: "stack",
+                  component: () => import("../views/AlPage/AlPageOneTwo.vue"),
+                },
               ],
             },
           ],

@@ -24,6 +24,10 @@ button {
   border: none;
 }
 
+.cor17 {
+  color: #171717;
+}
+
 .fz6 {
   transform: scale(0.5);
   -webkit-transform: scale(0.5);
@@ -97,12 +101,24 @@ button {
   cursor: pointer;
 }
 
+.disInl {
+  display: inline-block;
+}
+
 .dis {
   display: flex;
 }
 
+.col {
+  flex-direction: column;
+}
+
 .spa {
   justify-content: space-between;
+}
+
+.spaAro {
+  justify-content: space-around;
 }
 
 .disCen {
@@ -112,6 +128,10 @@ button {
 
 .poa {
   position: absolute;
+}
+
+.por {
+  position: relative;
 }
 
 .poaRT {
@@ -126,6 +146,18 @@ button {
   left: 0;
 }
 
+.spo {
+  padding: 10px;
+  background-color: #292d3e;
+  border-radius: 12px;
+}
+
+.spoGra {
+  padding: 10px;
+  background-color: #3a3a3a;
+  border-radius: 12px;
+}
+
 .r0 {
   right: 0;
 }
@@ -138,12 +170,24 @@ button {
   padding: 0 0 0 5px;
 }
 
+.padT10 {
+  padding: 10px 0 0 0;
+}
+
+.padB10 {
+  padding: 0 0 10px 0;
+}
+
 .padL10 {
   padding: 0 0 0 10px;
 }
 
 .padL15 {
   padding: 0 0 0 15px;
+}
+
+.padL20 {
+  padding: 0 0 0 20px;
 }
 
 .padR10 {
@@ -155,11 +199,27 @@ button {
 }
 
 .pad10 {
-  padding: 0 10px 0 10px;
+  padding: 10px 10px 10px 10px;
+}
+
+.pad20 {
+  padding: 20px;
+}
+
+.pad204 {
+  padding: 20px 20px 20px 20px;
 }
 
 .mar10 {
   margin: 0 10px 0 10px;
+}
+
+.marL20 {
+  margin: 0 0 0 20px;
+}
+
+.marL100 {
+  margin: 0 0 0 100px;
 }
 
 .marA {
@@ -175,6 +235,10 @@ button {
 
 .pTwo {
   text-indent: 2.5rem;
+}
+
+.padTwo {
+  padding: 0 0 0 50px;
 }
 
 .pFou {
@@ -194,22 +258,67 @@ button {
 }
 
 .bor {
-  padding: 10px 10px 10px 10px;
-  border: 1px solid #000;
+  /* padding: 10px 10px 10px 10px; */
+  border: 1px solid #c4c4c4;
   border-radius: 10px;
+}
+
+.borT {
+  /* padding: 10px 10px 10px 10px; */
+  border-top: 1px solid #c4c4c4;
+}
+
+.borR {
+  /* padding: 10px 10px 10px 10px; */
+  border-right: 1px solid #c4c4c4;
+}
+
+.borB {
+  /* padding: 10px 10px 10px 10px; */
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.borL {
+  /* padding: 10px 10px 10px 10px; */
+  border-left: 1px solid #c4c4c4;
 }
 
 .tex {
   text-decoration: line-through;
 }
 
+.cor29 {
+  color: #292d3e;
+}
+
 .bgcVS {
+  /* width: 100%; */
   background-color: #292d3e;
-  border-radius: 5px;
-  padding-left: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  border-radius: 30px;
+  padding: 100px 0 100px 80px;
   overflow-x: auto;
+  margin: 80px 0;
+
+  font-size: 30px;
+}
+
+.bgcVSMid {
+  margin: 110px 0;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  color: #676e95;
+  /* background-color: #1f222f; */
+  background-color: #292d3e;
+  border-right: 4px solid #1f222f;
+}
+
+.VSL {
+  border-left: 1px solid #676e95;
+}
+
+.w100 {
+  width: 100%;
 }
 
 .keyword {
@@ -292,59 +401,8 @@ button {
   overflow-x: auto;
 }
 
-.toTop {
-  bottom: 170px;
-  right: 50px;
-  position: fixed;
-  z-index: 200;
-  background-color: #6f020250;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  cursor: pointer;
-}
+/* A CSS 模板 ------------------------------------------------------------------------------------------------- */
 
-.toTopButton {
-  position: relative;
-  font-size: 20px;
-  bottom: 7px;
-  padding-left: 0;
-  color: #999;
-  pointer-events: none;
-}
-
-.toTop:hover {
-  background-color: #7f010190;
-}
-
-.toBot {
-  bottom: 100px;
-  right: 50px;
-  position: fixed;
-  z-index: 200;
-  background-color: #6f020250;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.toBot:hover {
-  background-color: #7f010190;
-}
-
-.toBotButton {
-  position: relative;
-  font-size: 20px;
-  bottom: 0;
-  padding-left: 0;
-  color: #999;
-  pointer-events: none;
-}
-
-@media screen and (max-width: 700px) {
-}
-
-/* A 右下角 TOP 外觀 --------------------------------------------------------------- */
 /* V 控制 Transition fade 動畫 ------------------------------------------------------------------------------------------------------- */
 .fade-enter-active,
 .fade-leave-active {
@@ -414,63 +472,7 @@ button {
 }
 
 /* A 控制 Transition fade 動畫 --------------------------------------------------------------------------------- */
-/* V code input 框特效 ------------------------------------------------------------------------------- */
-.code-container {
-  position: relative;
-  width: 80vw;
-  max-width: 100%;
-}
 
-.code-container pre {
-  margin: 0;
-}
-
-.code-container code {
-  /* code 背景 */
-  background-color: #282c34;
-  color: var(--gray);
-  transition: all var(--darkMode) ease;
-  display: block;
-  padding: 1em;
-  font-family: Consolas, "Courier New", monospace;
-  font-size: 16px;
-  line-height: 1.5;
-  border-radius: 5px;
-  overflow-x: auto;
-}
-
-.code-container code span {
-  display: inline-block;
-}
-
-.copy-button {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  background-color: #0077aa;
-  color: #fff;
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.copy-status {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  background-color: #0077aa;
-  color: #fff;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  transition: opacity 0.3s ease-in-out;
-  opacity: 1;
-}
-
-.copy-status.show {
-  opacity: 1;
-}
-/* A code input 框特效 ------------------------------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -491,4 +493,53 @@ button {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #666;
+}
+
+.toTop {
+  bottom: 170px;
+  right: 50px;
+  position: fixed;
+  z-index: 200;
+  background-color: #6f020250;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toTopButton {
+  position: relative;
+  font-size: 20px;
+  bottom: 7px;
+  padding-left: 0;
+  color: #999;
+  pointer-events: none;
+}
+
+.toTop:hover {
+  background-color: #7f010190;
+}
+
+.toBot {
+  bottom: 100px;
+  right: 50px;
+  position: fixed;
+  z-index: 200;
+  background-color: #6f020250;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.toBot:hover {
+  background-color: #7f010190;
+}
+
+.toBotButton {
+  position: relative;
+  font-size: 20px;
+  bottom: 0;
+  padding-left: 0;
+  color: #999;
+  pointer-events: none;
 }
