@@ -51,6 +51,105 @@ function locate(idPound) {
       <div class="mainContainer">
         <div class="mainLayout">
           <!-- 這裡 -->
+          <br />
+          <br />
+          <p class="fz28">集合通常由一組 無序的 , 不能重複的 元素構成</p>
+          <br />
+          <p class="fz28">集合結構中 元素 不允許重複</p>
+          <br />
+          <p class="fz28 cor36"># 集合 操作</p>
+          <br />
+          <p class="fz28">add ( value ) 向集合添加一個新的項</p>
+          <br />
+          <p class="fz28">remove ( value ) 從集合移除一個值</p>
+          <br />
+          <p class="fz28">has ( value ) 如果值在集合中 返回 true</p>
+          <br />
+          <p class="fz28">clear () 移除集合中的所有項</p>
+          <br />
+          <p class="fz28">size () 返回集合所包含元素的數量 , 類似數組.length</p>
+          <br />
+          <p class="fz28">values () 返回一個包含集合中所有值的數組</p>
+          <br />
+          <div class="bgcVS">
+            <div>
+              <span class="function">function </span>
+              <span class="word">Set</span> <span class="brackets">(){</span>
+            </div>
+            <div class="padTwo VSL">
+              <span class="comment">//屬性</span>
+              <div>
+                <span class="then">this</span> <span class="word">.items</span>
+                <span class="then">=</span> <span class="brackets">{}</span>
+              </div>
+              <br />
+              <div><span class="comment">//方法</span></div>
+              <div><span class="comment">//1.add方法</span></div>
+              <div>
+                <span class="word">Set</span>
+                <span class="variable">.prototype.add</span>
+                <span class="then">=</span>
+                <span class="function">function </span>
+                <span class="brackets">(</span> <span class="word">value</span>
+                <span class="brackets">){</span>
+              </div>
+              <div class="padTwo VSL">
+                <div>
+                  <span class="comment"
+                    >//判斷當前集合中是否已經包含了該元素</span
+                  >
+                </div>
+                <span class="comment">//將元素添加到集合中</span>
+                <div>
+                  <span class="then">this</span>
+                  <span class="word">.items</span>
+                  <span class="brackets">[</span>
+                  <span class="word">value</span>
+                  <span class="brackets">]</span> <span class="then">=</span>
+                  <span class="word">value</span>
+                  <span class="comment">//讓鍵值都為value</span>
+                </div>
+                <div>
+                  <span class="then">return </span>
+                  <span class="number">true</span>
+                </div>
+
+                <div></div>
+              </div>
+              <div><span class="brackets">}</span></div>
+              <br />
+              <div>
+                <span class="comment"
+                  >//has方法 判斷當前集合中是否已經包含了該元素</span
+                >
+              </div>
+              <div>
+                <span class="word">Set</span>
+                <span class="variable">.prototype.has</span>
+                <span class="then">=</span>
+                <span class="function">function </span>
+                <span class="brackets">(</span> <span class="word">value</span>
+                <span class="brackets">){</span>
+              </div>
+              <div class="padTwo VSL">
+                <span class="comment">//重複返回true</span>
+                <div>
+                  <span class="then">return </span>
+                  <span class="then">this</span>
+                  <span class="word">.items</span>
+                  <span class="variable">.hasOwnProperty</span>
+                  <span class="brackets">(</span>
+                  <span class="word">value</span>
+                  <span class="brackets">)</span>
+                </div>
+
+                <div></div>
+              </div>
+              <div><span class="brackets">}</span></div>
+
+              <div></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

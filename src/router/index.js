@@ -39,6 +39,10 @@ const router = createRouter({
                   path: "linkedlist",
                   component: () => import("../views/AlPage/AlPageOneFour.vue"),
                 },
+                {
+                  path: "set",
+                  component: () => import("../views/AlPage/AlPageOneFive.vue"),
+                },
               ],
             },
           ],
