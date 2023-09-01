@@ -35,6 +35,10 @@ const router = createRouter({
                   path: "queue",
                   component: () => import("../views/AlPage/AlPageOneThree.vue"),
                 },
+                {
+                  path: "linkedlist",
+                  component: () => import("../views/AlPage/AlPageOneFour.vue"),
+                },
               ],
             },
           ],

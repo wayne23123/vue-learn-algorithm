@@ -51,6 +51,297 @@ function locate(idPound) {
       <div class="mainContainer">
         <div class="mainLayout">
           <!-- 這裡 -->
+          <br />
+          <p class="fz28">
+            <a href="https://zh.wikipedia.org/zh-tw/%E9%93%BE%E8%A1%A8"
+              >linked list @wiki</a
+            >
+          </p>
+          <br />
+          <p class="fz28">鏈表不同於數組 , 鏈表中元素 不必是 連續的空間</p>
+          <br />
+          <p class="fz28">
+            鏈表每個元素 由一個 存儲元素本身的節點 和一個 指向下一個元素的引用
+            組成
+          </p>
+          <br />
+          <p class="fz28 cor36"># 優</p>
+          <br />
+          <p class="fz28">內存空間不必是 連續的</p>
+          <br />
+          <p class="fz28">在創建時 不必確定大小 , 可無限延伸</p>
+          <br />
+          <p class="fz28">
+            插入 和 刪除數據時 , 時間複雜度達到 O(1) , 相對數組效率高很多
+          </p>
+          <br />
+          <p class="fz28 cor36"># 缺</p>
+          <br />
+          <p class="fz28">訪問任一元素 , 都要從頭開始訪問</p>
+          <br />
+          <p class="fz28">無法透過下標直接訪問元素</p>
+          <br />
+
+          <p class="fz28 cor36"># 鏈表操作</p>
+          <br />
+          <p class="fz28">append ( 元素 ) 向列表尾部添加一個新的項</p>
+          <br />
+          <p class="fz28">
+            insert ( position , 元素 ) 向列表特定位置插入新的項
+          </p>
+          <br />
+          <p class="fz28">get ( position ) 獲取對應位置的元素</p>
+          <br />
+          <p class="fz28">
+            indexOf ( 元素 ) 返回元素在列表中的索引 , 列表沒有該元素 返回 -1
+          </p>
+          <br />
+          <p class="fz28">update ( position ) 修改某位置的元素</p>
+          <br />
+          <p class="fz28">removeAt ( position ) 從列表的特定位置移除一項</p>
+          <br />
+          <p class="fz28">remove ( 元素 ) 從列表中移除一項</p>
+          <br />
+          <p class="fz28">isEmpty() 鏈表中沒任何元素 返回 true</p>
+          <br />
+          <p class="fz28">size() 返回鏈表包含的元素個數 , 類似數組.length</p>
+          <br />
+          <p class="fz28">
+            toString() 由於鏈表用 Node 類 , 需要重寫JS對象默認 toString 方法 ,
+            讓其只輸出元素的值
+          </p>
+          <br />
+
+          <div class="bgcVS">
+            <div>
+              <span class="function">function </span>
+              <span class="word">LinkList</span>
+              <span class="brackets">(){</span>
+            </div>
+            <div class="padTwo VSL">
+              <span class="comment">//內部的類:節點類</span>
+              <div>
+                <span class="function">function </span>
+                <span class="word">Node</span> <span class="brackets">(</span>
+                <span class="word">data</span> <span class="brackets">){</span>
+              </div>
+
+              <div></div>
+              <div class="padTwo VSL">
+                <span class="then">this</span> <span class="word">.data</span>
+                <span class="then">=</span> <span class="word">data</span>
+                <div>
+                  <span class="then">this</span>
+                  <span class="word">.next</span> <span class="then">=</span>
+                  <span class="then">null</span>
+                </div>
+                <div></div>
+              </div>
+              <div><span class="brackets">}</span></div>
+              <br />
+              <div><span class="comment">//屬性</span></div>
+              <div>
+                <span class="then">this</span> <span class="word">.head</span>
+                <span class="then">=null</span>
+              </div>
+              <div>
+                <span class="then">this</span>
+                <span class="variable">.length</span>
+                <span class="then">=</span> <span class="number">0</span>
+              </div>
+              <br />
+              <div><span class="comment">//1.追加方法</span></div>
+              <div>
+                <span class="word">LinkedList</span>
+                <span class="variable">.prototype.append</span>
+                <span class="then">=</span>
+                <span class="function">function </span>
+                <span class="brackets">(</span> <span class="word">data</span>
+                <span class="brackets">){</span>
+              </div>
+              <div class="padTwo VSL">
+                <span class="comment">//判斷是否添加的是第一個節點</span>
+                <div>
+                  <span class="then">if</span> <span class="brackets">(</span>
+                  <span class="then">this</span>
+                  <span class="variable">.length</span>
+                  <span class="then">==</span> <span class="number">0</span>
+                  <span class="brackets">) { </span>
+                  <span class="comment">// 是第一個節點</span>
+                </div>
+                <div></div>
+                <div class="padTwo VSL">
+                  <span class="function">let </span>
+                  <span class="word">newNode</span> <span class="then">=</span>
+                  <span class="then">new </span> <span class="word">Node</span>
+                  <span class="brackets">(</span>
+                  <span class="word">data</span>
+                  <span class="brackets">) </span>
+                  <span class="comment">// 創建新 node 節點</span>
+                  <div>
+                    <span class="then">this</span>
+                    <span class="word">.head</span> <span class="then">=</span>
+                    <span class="word">newNode </span>
+                    <span class="comment"
+                      >// 讓 this 指針 指向 新 node 節點</span
+                    >
+                  </div>
+
+                  <div></div>
+                </div>
+
+                <div>
+                  <span class="brackets">}</span>
+                  <span class="then">else </span>
+                  <span class="brackets">{</span>
+                </div>
+
+                <div class="padTwo VSL">
+                  <span class="function">let </span>
+                  <span class="word">newNode</span> <span class="then">=</span>
+                  <span class="then">new </span> <span class="word">Node</span>
+                  <span class="brackets">(</span>
+                  <span class="word">data</span>
+                  <span class="brackets">) </span>
+
+                  <span class="comment">// 創建新 node 節點</span>
+
+                  <div>
+                    <span class="comment"
+                      >//通過這個head一個一個找到最後那個節點</span
+                    >
+                  </div>
+                  <div>
+                    <span class="comment"
+                      >//讓最後那個節點 next = 指向 新的節點</span
+                    >
+                  </div>
+                  <div>
+                    <span class="function">let </span>
+                    <span class="word">current</span>
+                    <span class="then">= this</span>
+                    <span class="word">.head</span>
+                    <span class="comment"
+                      >//因為head指針指向第一個節點,所以當前current為第一個節點</span
+                    >
+                  </div>
+                  <div>
+                    <span class="function">while</span>
+                    <span class="brackets">(</span>
+                    <span class="word">current.next</span>
+                    <span class="brackets">){</span>
+                    <span class="comment"
+                      >//判斷當前next是否為null,是null代表是最後一個</span
+                    >
+                  </div>
+
+                  <div></div>
+
+                  <div class="padTwo VSL">
+                    <span class="word">current</span>
+                    <span class="then">=</span>
+                    <span class="word">current.next</span>
+                    <div></div>
+                  </div>
+
+                  <div><span class="brackets">}</span></div>
+                  <div>
+                    <span class="comment">//最後節點的next指向新的節點</span>
+                  </div>
+                  <div>
+                    <span class="word">current.next</span>
+                    <span class="then">=</span>
+                    <span class="word">newNode</span>
+                  </div>
+                </div>
+                <div><span class="brackets">}</span></div>
+                <div><span class="comment">//length+1</span></div>
+                <div>
+                  <span class="then">this</span>
+                  <span class="variable">.length</span>
+                  <span class="then">+=</span> <span class="number">1</span>
+                </div>
+              </div>
+              <div><span class="brackets">}</span></div>
+            </div>
+            <div><span class="brackets">}</span></div>
+          </div>
+
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
         </div>
       </div>
     </div>
