@@ -60,6 +60,59 @@ function locate(idPound) {
           </p>
           <br />
           <br />
+          <p class="fz36">數組</p>
+          <p class="fz30 cor36">優</p>
+          <p class="fz28">根據下標值 訪問 效率高</p>
+          <br />
+          <p class="fz28">
+            想根據元素查找位置? _ 先對數組進行排序 , 再二分查找
+          </p>
+          <br />
+          <br />
+          <p class="fz30 cor36">缺</p>
+          <p class="fz28">在插入 刪除 數據 , 需大量位移操作 , 效率低</p>
+          <br />
+          <p class="fz28">要先對數組進行排序 , 才能提高查找效率</p>
+          <br />
+          <br />
+
+          <p class="fz36">鏈表</p>
+          <p class="fz30 cor36">優</p>
+          <p class="fz28">插入 和 刪除 操作效率很高</p>
+          <br />
+          <br />
+          <p class="fz30 cor36">缺</p>
+          <p class="fz28">查找效率低 , 要從頭開始依次訪問鏈表中 每個數據項</p>
+          <br />
+          <p class="fz28">插入刪除中間項 , 仍要從頭找對應數據</p>
+          <br />
+          <br />
+
+          <p class="fz36">哈希表</p>
+          <p class="fz30 cor36">優</p>
+          <p class="fz28">插入 查詢 刪除 效率高</p>
+          <br />
+          <br />
+          <p class="fz30 cor36">缺</p>
+          <p class="fz28">空間利用率不高 , 底層用數組 , 且某些單元沒被利用</p>
+          <br />
+          <p class="fz28">無序的 , 不能按照固定順序來遍歷哈希表中元素</p>
+          <br />
+          <p class="fz28">不能快速找出哈希表中 最大 最小值</p>
+          <br />
+          <br />
+
+          <p class="fz36"></p>
+          <p class="fz30 cor36"></p>
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+          <p class="fz28"></p>
+          <br />
+
+          <br />
+          <br />
           <div id="oneData001" class="articleCardTitle">
             [ 數據結構 ] ≫ 數組
           </div>

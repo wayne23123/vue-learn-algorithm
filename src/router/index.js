@@ -43,6 +43,18 @@ const router = createRouter({
                   path: "set",
                   component: () => import("../views/AlPage/AlPageOneFive.vue"),
                 },
+                {
+                  path: "map",
+                  component: () => import("../views/AlPage/AlPageOneSix.vue"),
+                },
+                {
+                  path: "dictionary",
+                  component: () => import("../views/AlPage/AlPageOneSeven.vue"),
+                },
+                {
+                  path: "tree",
+                  component: () => import("../views/AlPage/AlPageOneEight.vue"),
+                },
               ],
             },
           ],
